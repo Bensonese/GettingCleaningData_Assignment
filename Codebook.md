@@ -2,9 +2,13 @@
 
 #### The data set includes the following variables:
 
-##### [1] "Subject"                       
+##### [1] "Subject"
+
+The ID of the subject who performed the activity for each sample. Its range is from 1 to 30.
 
 ##### [2] "Activity"
+
+The type of activity the subject was performing when the measurement was taken. There are six alternatives: 'Laying', 'Sitting',  'Standing', 'Walk Upstairs', 'Walking', 'Walking Downstairs'. 
 
 ##### [3-68] Measurement data (please see below for a complete list of these 66 variable names) 
 
