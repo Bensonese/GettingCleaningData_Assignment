@@ -10,7 +10,7 @@ The ID of the subject who performed the activity for each sample. Its range is f
 
 The type of activity the subject was performing when the measurement was taken. There are six alternatives: 'Laying', 'Sitting',  'Standing', 'Walk Upstairs', 'Walking', 'Walking Downstairs'. 
 
-##### [3-68] Measurement data (please see below for a complete list of these 66 variable names) 
+##### [3-68] Measurement data (see below for a complete list of these 66 variable names) 
 
 These data came from the accelerometer and gyroscope 3-axial raw signals Time_Acc_XYZ and Time_Gyro_XYZ. These time domain signals (denoted by prefix "Time_") were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (Time_BodyAcc_XYZ and Time_GravityAcc_XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
 
@@ -18,14 +18,13 @@ Subsequently, the body linear acceleration and angular velocity were derived in 
 
 Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the 'f' to indicate frequency domain signals). 
 
-Notes: 
-======
-- Features are normalized and bounded within [-1,1].
-- mean(): Mean value
-- std(): Standard deviation
-- The values in the tidy data set consist of averaged measurement data for each subject during each particular activity.
-These signals were used to estimate variables of the feature vector for each pattern:  
-'-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
+###### Notes: 
+
+* Values are normalized and bounded within [-1,1].
+* mean: Mean value
+* std: Standard deviation
+* The values in the tidy data set consist of averaged measurement data for each subject during each particular activity.
+* '_XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
 
 "Time_BodyAcc_mean_X"           "Time_BodyAcc_mean_Y"           "Time_BodyAcc_mean_Z"          
 "Time_BodyAcc_std_X"            "Time_BodyAcc_std_Y"            "Time_BodyAcc_std_Z"           
