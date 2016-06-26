@@ -33,6 +33,8 @@ x$V1.2 <- ifelse(x$V1.2 == 1, "Walking",
           ifelse(x$V1.2 == 3, "Walking Downstairs",
           ifelse(x$V1.2 == 4, "Sitting",
           ifelse(x$V1.2 == 5, "Standing", "Laying")))))
+          
+#### Generate appropriate and easier-to-understand variable names from the raw 'features' table and apply them to the filtered data set
 
 list <- as.character(list)
 variables <- sub("\\(\\)", "", list[index])
@@ -41,9 +43,13 @@ variables <- sub("^t", "Time_", variables)
 variables <- sub("^f", "Freq_", variables)
 colnames(x) <- c(variables, "Subject", "Activity")
 
+#### Move the "Subject" and "Activity" variables to the first two columns to facilitate future reference and data manipulation
+
 a <- x[,1:66]
 b <- x[,67:68]
 x <- cbind(b,a)
+
+#### Create a new, tidy data set with the average of each variable for each activity and each subject and output the resultant data frame as a text file with appropriate formats
 
 library(dplyr)
 tidy <- x %>% group_by(Subject, Activity) %>% summarise_each(funs(mean))
