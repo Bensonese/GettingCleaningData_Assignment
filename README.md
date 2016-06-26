@@ -1,9 +1,14 @@
+### Explanation of script functions in run_analysis.R
+
+#### Set the working directory
+
 setwd("C:/UCI HAR Dataset")
+
+#### Load the relevant raw data sets into R
 
 test_who <- read.table("test/subject_test.txt")
 test_values <- read.table("test/X_test.txt")
 test_what <- read.table("test/y_test.txt")
-
 train_who <- read.table("train/subject_train.txt")
 train_values <- read.table("train/X_train.txt")
 train_what <- read.table("train/y_train.txt")
