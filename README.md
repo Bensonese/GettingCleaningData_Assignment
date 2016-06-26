@@ -13,14 +13,20 @@ train_who <- read.table("train/subject_train.txt")
 train_values <- read.table("train/X_train.txt")
 train_what <- read.table("train/y_train.txt")
 
+#### Merge the relevant data sets from "test" and "train" and combine them into one data frame
+
 test <- cbind(test_values, test_who, test_what)
 train <- cbind(train_values, train_who, train_what)
 all_data <- rbind(test, train)
+
+#### Filter the overall data frame so that only those variables pertaining to the mean or standard deviation of a distinct measurement are left
 
 list <- read.table("features.txt")
 list <- list[,2]
 index <- grep("(mean\\(\\))|std", list)
 x <- all_data[,c(index, 562:563)]
+
+#### Recode the "Activity" column with descriptive names for each of the six alternatives
 
 x$V1.2 <- ifelse(x$V1.2 == 1, "Walking", 
           ifelse(x$V1.2 == 2, "Walk Upstairs",
